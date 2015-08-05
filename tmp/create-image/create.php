@@ -1,10 +1,9 @@
 <?php
 
-  // create image and deliver to browser
-  header ('Content-Type: image/png');
+  //header ('Content-Type: image/png'); // allow us to server as image
 
-  $width = 640;
-  $height = 480;
+  $width = 2640;
+  $height = 2480;
 
   $im = @imagecreatetruecolor($width, $height) // create image
       or die('Cannot Initialize new GD image stream');
@@ -17,7 +16,7 @@
   //$text_color = imagecolorallocate($im, 255, 255, 255);
   //imagestring($im, 1, 0, 0, 'ROOOOARR', $text_color);
 
-  imagejpeg($im); // output image
+  imagejpeg($im,'raptor.jpg'); // output image
 
   imagedestroy($im); // free up memory
 
